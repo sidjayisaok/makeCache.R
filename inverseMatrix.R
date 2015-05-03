@@ -1,3 +1,5 @@
+
+#this part caches the matrix, taking in account if the determinant is zero
 makeCacheMatrix = function(x = matrix()) {
   m = NULL
   if(det(x)==0){
@@ -16,6 +18,7 @@ makeCacheMatrix = function(x = matrix()) {
        getsolve = getsolve)
 }
 
+#this part attempts to solve the inverse
 cacheSolve = function(x, ...) {
   m = x$getsolve()
   if(!is.null(m)) {
